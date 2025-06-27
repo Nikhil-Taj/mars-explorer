@@ -1,4 +1,4 @@
-import type { ApodData, StorageKeys } from '../types';
+import type { StorageKeys } from '../types';
 
 /**
  * Date Utilities
@@ -294,7 +294,7 @@ export class PerformanceUtils {
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
-    let timeout: number;
+    let timeout: NodeJS.Timeout;
     return (...args: Parameters<T>) => {
       clearTimeout(timeout);
       timeout = setTimeout(() => func(...args), wait);

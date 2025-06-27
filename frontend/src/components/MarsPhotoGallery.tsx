@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+vimport React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Grid, 
@@ -401,7 +401,7 @@ const MarsPhotoGallery: React.FC<MarsPhotoGalleryProps> = ({
               <button
                 onClick={() => {
                   // Trigger a search with current filters
-                  onFiltersChange?.(filters);
+                  onFilterChange?.(filters);
                 }}
                 className="btn-primary text-sm"
               >

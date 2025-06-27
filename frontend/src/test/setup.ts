@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom';
+import React from 'react';
 
 // Mock framer-motion to avoid animation issues in tests
 jest.mock('framer-motion', () => ({

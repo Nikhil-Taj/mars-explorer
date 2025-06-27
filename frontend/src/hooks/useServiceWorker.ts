@@ -168,7 +168,7 @@ export const useServiceWorker = (): ServiceWorkerState & ServiceWorkerActions =>
         resolve(event.data);
       };
 
-      state.registration.active!.postMessage(
+      state.registration?.active?.postMessage(
         { type: 'GET_CACHE_STATUS' },
         [messageChannel.port2]
       );

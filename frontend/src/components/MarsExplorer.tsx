@@ -51,7 +51,7 @@ const MarsExplorer: React.FC = () => {
     roverInfo: null,
     cameras: [],
     favorites: [],
-    loading: false,
+    isLoading: false,
     error: null,
   });
 
@@ -930,7 +930,7 @@ const MarsExplorer: React.FC = () => {
               <MarsPhotoGallery
                 photos={state.photos}
                 cameras={state.cameras}
-                loading={state.loading}
+                loading={state.isLoading}
                 onPhotoSelect={(photo) => {
                   setState(prev => ({ ...prev, selectedPhoto: photo }));
                 }}
@@ -953,7 +953,7 @@ const MarsExplorer: React.FC = () => {
               <MarsAnalytics
                 photos={state.photos}
                 cameras={state.cameras}
-                loading={state.loading}
+                loading={state.isLoading}
               />
             )}
 

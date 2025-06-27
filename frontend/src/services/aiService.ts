@@ -244,7 +244,7 @@ class AIService {
         }
 
         // Boost based on sol diversity
-        const avgSol = userPreferences.viewingHistory?.reduce((sum, p) => sum + p.sol, 0) / 
+        const avgSol = (userPreferences.viewingHistory?.reduce((sum, p) => sum + p.sol, 0) || 0) /
                       (userPreferences.viewingHistory?.length || 1);
         const solDifference = Math.abs(photo.sol - avgSol);
         if (solDifference > 100 && solDifference < 500) {
