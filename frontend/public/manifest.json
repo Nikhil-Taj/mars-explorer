@@ -1,0 +1,86 @@
+{
+  "short_name": "Mars Explorer",
+  "name": "Mars Explorer - Journey through the Red Planet",
+  "description": "Explore breathtaking photographs captured from the surface of Mars, filtered by camera, date, and Martian day.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#ef4444",
+  "background_color": "#0f172a",
+  "categories": ["education", "science", "space"],
+  "lang": "en-US",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Latest Photos",
+      "short_name": "Latest",
+      "description": "View the latest Mars photos",
+      "url": "/?tab=latest",
+      "icons": [
+        {
+          "src": "icons/shortcut-latest.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Favorites",
+      "short_name": "Favorites",
+      "description": "View your favorite Mars photos",
+      "url": "/?view=favorites",
+      "icons": [
+        {
+          "src": "icons/shortcut-favorites.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Statistics",
+      "short_name": "Stats",
+      "description": "View Mars mission statistics",
+      "url": "/?view=stats",
+      "icons": [
+        {
+          "src": "icons/shortcut-stats.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/desktop-1.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide",
+      "label": "Mars Explorer main interface"
+    },
+    {
+      "src": "screenshots/mobile-1.png",
+      "type": "image/png",
+      "sizes": "390x844",
+      "form_factor": "narrow",
+      "label": "Mars Explorer mobile view"
+    }
+  ]
+}
