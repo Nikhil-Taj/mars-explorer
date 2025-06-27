@@ -130,69 +130,7 @@ export class StorageUtils {
   }
 }
 
-/**
- * Favorites Management
- */
-export class FavoritesUtils {
-  private static readonly STORAGE_KEY: keyof StorageKeys = 'FAVORITES';
 
-  /**
-   * Get all favorites
-   */
-  static getFavorites(): ApodData[] {
-    return StorageUtils.load<ApodData[]>(this.STORAGE_KEY) || [];
-  }
-
-  /**
-   * Add to favorites
-   */
-  static addFavorite(apod: ApodData): void {
-    const favorites = this.getFavorites();
-    const exists = favorites.some(fav => fav.date === apod.date);
-    
-    if (!exists) {
-      favorites.push(apod);
-      StorageUtils.save(this.STORAGE_KEY, favorites);
-    }
-  }
-
-  /**
-   * Remove from favorites
-   */
-  static removeFavorite(date: string): void {
-    const favorites = this.getFavorites();
-    const filtered = favorites.filter(fav => fav.date !== date);
-    StorageUtils.save(this.STORAGE_KEY, filtered);
-  }
-
-  /**
-   * Check if APOD is favorite
-   */
-  static isFavorite(date: string): boolean {
-    const favorites = this.getFavorites();
-    return favorites.some(fav => fav.date === date);
-  }
-
-  /**
-   * Toggle favorite status
-   */
-  static toggleFavorite(apod: ApodData): boolean {
-    if (this.isFavorite(apod.date)) {
-      this.removeFavorite(apod.date);
-      return false;
-    } else {
-      this.addFavorite(apod);
-      return true;
-    }
-  }
-
-  /**
-   * Get favorites count
-   */
-  static getFavoritesCount(): number {
-    return this.getFavorites().length;
-  }
-}
 
 /**
  * URL Utilities
@@ -412,7 +350,6 @@ export class ErrorUtils {
 export const Utils = {
   Date: DateUtils,
   Storage: StorageUtils,
-  Favorites: FavoritesUtils,
   Url: UrlUtils,
   Image: ImageUtils,
   Performance: PerformanceUtils,
