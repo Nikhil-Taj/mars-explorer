@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import apodRoutes from './apodRoutes';
 import marsRoutes from './marsRoutes';
 import { ApiResponse } from '../types';
 
@@ -34,7 +33,6 @@ router.get('/', (req, res) => {
         'GET /api/mars/cameras': 'Get available cameras',
         'GET /api/mars/rover': 'Get rover information',
         'GET /api/mars/health': 'Mars service health check',
-        'GET /api/apod': 'Get APOD data (legacy)',
       },
     },
     message: 'Welcome to NASA Space Explorer API',
@@ -46,6 +44,5 @@ router.get('/', (req, res) => {
 
 // Mount route modules
 router.use('/mars', marsRoutes);
-router.use('/apod', apodRoutes);
 
 export default router;

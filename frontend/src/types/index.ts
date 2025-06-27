@@ -47,17 +47,7 @@ export interface RoverInfo {
   cameras: number;
 }
 
-// Legacy APOD Types (keeping for compatibility)
-export interface ApodData {
-  date: string;
-  explanation: string;
-  hdurl?: string;
-  media_type: 'image' | 'video';
-  service_version: string;
-  title: string;
-  url: string;
-  copyright?: string;
-}
+
 
 // Request Types
 export interface GetMarsPhotosRequest {
@@ -67,12 +57,7 @@ export interface GetMarsPhotosRequest {
   page?: number;
 }
 
-export interface GetApodRequest {
-  date?: string;
-  start_date?: string;
-  end_date?: string;
-  count?: number;
-}
+
 
 // UI State Types
 export interface LoadingState {
@@ -90,20 +75,7 @@ export interface MarsState extends LoadingState {
   favorites: MarsPhoto[];
 }
 
-export interface ApodState extends LoadingState {
-  currentApod: ApodData | null;
-  apodList: ApodData[];
-  searchResults: ApodData[];
-  favorites: ApodData[];
-}
-
 // Component Props Types
-export interface ApodCardProps {
-  apod: ApodData;
-  onFavorite?: (apod: ApodData) => void;
-  isFavorite?: boolean;
-  className?: string;
-}
 
 export interface SearchBarProps {
   onSearch: (query: string) => void;
@@ -171,7 +143,7 @@ export interface PaginationParams {
 }
 
 export interface SortParams {
-  field: keyof ApodData;
+  field: string;
   direction: 'asc' | 'desc';
 }
 

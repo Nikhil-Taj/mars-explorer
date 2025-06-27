@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import MarsExplorer from './components/MarsExplorer';
-import TestComponent from './components/TestComponent';
 import ErrorBoundary from './components/ErrorBoundary';
 import './App.css';
 

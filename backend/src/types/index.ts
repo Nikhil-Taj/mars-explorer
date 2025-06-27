@@ -35,24 +35,7 @@ export interface MarsPhotosResponse {
   photos: MarsPhoto[];
 }
 
-// Legacy APOD Types (keeping for compatibility)
-export interface ApodData {
-  date: string;
-  explanation: string;
-  hdurl?: string | undefined;
-  media_type: 'image' | 'video';
-  service_version: string;
-  title: string;
-  url: string;
-  copyright?: string | undefined;
-}
 
-// Database Models
-export interface ApodDocument extends ApodData {
-  _id?: string;
-  createdAt?: Date;
-  updatedAt?: Date;
-}
 
 // Request/Response Types
 export interface GetMarsPhotosRequest {
@@ -62,12 +45,7 @@ export interface GetMarsPhotosRequest {
   page?: number;
 }
 
-export interface GetApodRequest {
-  date?: string | undefined;
-  start_date?: string | undefined;
-  end_date?: string | undefined;
-  count?: number | undefined;
-}
+
 
 // Express Request extension
 declare global {

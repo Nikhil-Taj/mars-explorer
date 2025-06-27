@@ -96,28 +96,8 @@ A beautiful, modern web application for exploring Mars rover photographs with AI
    # Edit .env.local with your API URL
    npm run dev
    ```
-
-4. **Open your browser**
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:3001
-
-## 🌐 Deployment
-
-Ready to deploy your Mars Explorer app? We've got you covered!
-
-### 📋 Quick Deploy
-```bash
-./deploy.sh  # Run deployment preparation script
 ```
 
-### 📖 Detailed Guides
-- **[Complete Deployment Guide](DEPLOYMENT.md)** - Step-by-step instructions
-- **[Deployment Checklist](DEPLOYMENT_CHECKLIST.md)** - Ensure nothing is missed
-
-### 🎯 Recommended Platforms
-- **Frontend**: [Vercel](https://vercel.com/) (free tier available)
-- **Backend**: [Render](https://render.com/) (free tier available)
-- **Database**: [MongoDB Atlas](https://www.mongodb.com/atlas) (free tier available)
 
 ## 🧪 Testing
 
@@ -170,9 +150,6 @@ mars-explorer/
 └── deploy.sh                # Deployment script
 ```
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### Development Workflow
 1. Fork the repository
@@ -190,12 +167,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **NASA** for providing the amazing Mars rover APIs
 - **Mars Rover Teams** for the incredible photography
 - **Open Source Community** for the fantastic tools and libraries
-
-## 📞 Support
-
-- 📧 Email: support@marsexplorer.com
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/mars-explorer/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/mars-explorer/discussions)
 
 ---
 
